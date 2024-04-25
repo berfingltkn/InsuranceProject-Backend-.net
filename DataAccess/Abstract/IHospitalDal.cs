@@ -13,7 +13,7 @@ namespace DataAccess.Abstract
     public interface IHospitalDal:IEntityRepository<Hospital>
     {
         List<HospitalDetailDto> GetHospitalDetails(Expression<Func<HospitalDetailDto, bool>> filter = null);
-       // List<HospitalDetailDto> GetHospitalsByCityAndDistrict(int cityID, int districtID);
-
+        // List<HospitalDetailDto> GetHospitalsByCityAndDistrict(int cityID, int districtID);
+        
     }
 }

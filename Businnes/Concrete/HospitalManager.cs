@@ -38,15 +38,15 @@ namespace Businnes.Concrete
             return new SuccessDataResult<List<Hospital>>(_hospitalDal.GetAll(), "hospital listed");
         }
 
-        public IDataResult<List<HospitalDetailDto>> GetDistrictByCityID(int cityID)
+        public IDataResult<List<HospitalDetailDto>> GetDistrictByCityID(string cityName)
         {
-            return new SuccessDataResult<List<HospitalDetailDto>>(_hospitalDal.GetHospitalDetails(h => h.cityID == cityID ), "get district by cityID and districtID");
+            return new SuccessDataResult<List<HospitalDetailDto>>(_hospitalDal.GetHospitalDetails(h => h.cityName == cityName ), "get district by cityID and districtID");
 
         }
 
-        public IDataResult<List<HospitalDetailDto>> GetHospitalsByCityAndDistrict(int cityID, int distructID)
+        public IDataResult<List<HospitalDetailDto>> GetHospitalsByCityAndDistrict(string cityName, string districtName)
         {
-            return new SuccessDataResult<List<HospitalDetailDto>>(_hospitalDal.GetHospitalDetails(h=>h.cityID==cityID && h.districtID==distructID),"get hospital by cityID and districtID");
+            return new SuccessDataResult<List<HospitalDetailDto>>(_hospitalDal.GetHospitalDetails(h=>h.cityName==cityName && h.districtName==districtName),"get hospital by cityName and districtName");
         }
 
        

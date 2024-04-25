@@ -8,7 +8,7 @@ using Autofac.Extensions.DependencyInjection;
 
 public class Program
 {
-    //merhaba
+    
     public static void Main(string[] args)
     {
         CreateHostBuilder(args).Build().Run();

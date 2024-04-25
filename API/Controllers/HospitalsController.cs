@@ -75,9 +75,9 @@ namespace API.Controllers
 
         }
         [HttpGet("GetHospitalsByCityAndDistrict")]
-        public IActionResult GetHospitalsByCityAndDistrict(int cityId, int districtId)
+        public IActionResult GetHospitalsByCityAndDistrict(string cityName, string districtName)
         {
-            var result = _hospitalService.GetHospitalsByCityAndDistrict(cityId, districtId);
+            var result = _hospitalService.GetHospitalsByCityAndDistrict(cityName, districtName);
             if (result.Success)
             {
                 return Ok(result);
@@ -86,9 +86,9 @@ namespace API.Controllers
 
         }
         [HttpGet("GetDistrictByCityID")]
-        public IActionResult GetDistrictByCityID(int cityId)
+        public IActionResult GetDistrictByCityID(string cityName)
         {
-            var result = _hospitalService.GetDistrictByCityID(cityId);
+            var result = _hospitalService.GetDistrictByCityID(cityName);
             if (result.Success)
             {
                 return Ok(result);
