@@ -20,6 +20,9 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Hospital> hospital { get; set; }
         public DbSet<City> city { get; set; }
         public DbSet<District> district { get; set; }
+        public DbSet<Policy> policy { get; set; }
+        public DbSet<Coverage> coverage { get; set; }
+        public DbSet<PolicyCoverage> policyCoverage { get; set; }
 
     }
 }

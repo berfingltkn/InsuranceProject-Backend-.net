@@ -26,6 +26,15 @@ namespace Businnes.DependencyResolvers.Autofac
 
             builder.RegisterType<HospitalManager>().As<IHospitalService>().SingleInstance();
             builder.RegisterType<EfHospitalDal>().As<IHospitalDal>().SingleInstance();
+
+            builder.RegisterType<PolicyManager>().As<IPolicyService>().SingleInstance();
+            builder.RegisterType<EfPolicyDal>().As<IPolicyDal>().SingleInstance();
+
+            builder.RegisterType<CoverageManager>().As<ICoverageService>().SingleInstance();
+            builder.RegisterType<EfCoverageDal>().As<ICoverageDal>().SingleInstance();
+
+            builder.RegisterType<PolicyCoverageManager>().As<IPolicyCoverageService>().SingleInstance();
+            builder.RegisterType<EfPolicyCoverageDal>().As<IPolicyCoverageDal>().SingleInstance();
         }
     }
 }
