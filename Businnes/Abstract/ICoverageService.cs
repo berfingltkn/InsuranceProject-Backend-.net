@@ -10,6 +10,8 @@ namespace Businnes.Abstract
 {
     public interface ICoverageService
     {
+        IDataResult<Coverage> GetOfferNoByCoverageType(string coverageType);
+        IDataResult<Coverage> GetAmountByCoverageType(string coverageType);
         IDataResult<List<Coverage>> GetAll();
         IResult Add(Coverage coverage);
         IResult Update(Coverage coverage);

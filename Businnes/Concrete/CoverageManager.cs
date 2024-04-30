@@ -38,6 +38,16 @@ namespace Businnes.Concrete
 
         }
 
+        public IDataResult<Coverage> GetAmountByCoverageType(string coverageType)
+        {
+            return new SuccessDataResult<Coverage>(_coverageDal.Get(c=>c.coverageType==coverageType), "coverage listed with type");
+        }
+
+        public IDataResult<Coverage> GetOfferNoByCoverageType(string coverageType)
+        {
+            return new SuccessDataResult<Coverage>(_coverageDal.Get(c => c.coverageType == coverageType), "coverage listed with type");
+        }
+
         public IResult Update(Coverage coverage)
         {
             _coverageDal.Update(coverage);

@@ -60,5 +60,28 @@ namespace API.Controllers
             }
             return BadRequest(result);
         }
+
+        [HttpGet("GetAmountByCoverageType")]
+        public IActionResult GetAmountByCoverageType(string type)
+        {
+            var result = _coverageService.GetAmountByCoverageType(type);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("GetOfferNoByCoverageType")]
+        public IActionResult GetOfferNoByCoverageType(string type)
+        {
+            var result = _coverageService.GetOfferNoByCoverageType(type);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
     }
 }
