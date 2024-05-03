@@ -60,5 +60,17 @@ namespace API.Controllers
             }
             return BadRequest(result);
         }
+
+        [HttpGet("getpolicyidbytcno")]
+        public IActionResult GetPolicyIdByTcno(int customerIdNumber)
+        {
+            var result = _policyService.GePolicyIdByTcno(customerIdNumber);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
     }
 }

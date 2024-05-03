@@ -10,6 +10,7 @@ namespace Businnes.Abstract
 {
     public interface IPolicyService
     {
+        IDataResult<Policy> GePolicyIdByTcno(int customerIdNumber);
         IDataResult<List<Policy>> GetAll();
         IResult Add(Policy policy);
         IResult Update(Policy policy);

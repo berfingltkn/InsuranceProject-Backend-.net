@@ -32,6 +32,11 @@ namespace Businnes.Concrete
             return new SuccessResult("policy deleted");
         }
 
+        public IDataResult<Policy> GePolicyIdByTcno(int customerIdNumber)
+        {
+            return new SuccessDataResult<Policy>(_policyDal.Get(p=>p.customerIdNumber== customerIdNumber), "policy listed with tcno");
+        }
+
         public IDataResult<List<Policy>> GetAll()
         {
             return new SuccessDataResult<List<Policy>>(_policyDal.GetAll(), "policies listed");
