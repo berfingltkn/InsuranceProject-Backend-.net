@@ -24,5 +24,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Coverage> coverage { get; set; }
         public DbSet<PolicyCoverage> policyCoverage { get; set; }
 
+        public DbSet<Payment> payment { get; set; }
+
     }
 }

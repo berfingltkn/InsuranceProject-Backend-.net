@@ -35,6 +35,9 @@ namespace Businnes.DependencyResolvers.Autofac
 
             builder.RegisterType<PolicyCoverageManager>().As<IPolicyCoverageService>().SingleInstance();
             builder.RegisterType<EfPolicyCoverageDal>().As<IPolicyCoverageDal>().SingleInstance();
+
+            builder.RegisterType<PaymentManager>().As<IPaymentService>().SingleInstance();
+            builder.RegisterType<EfPaymentDal>().As<IPaymentDal>().SingleInstance();
         }
     }
 }
