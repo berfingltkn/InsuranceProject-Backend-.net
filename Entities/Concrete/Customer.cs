@@ -12,7 +12,7 @@ namespace Entities.Concrete
     {
         [Key]
         public int user_id { get; set; }
-        public int tc_no { get; set; }
+        public string tc_no { get; set; }
         public string name { get; set; }
         public string surname {  get; set; }
         public string mail { get; set; }

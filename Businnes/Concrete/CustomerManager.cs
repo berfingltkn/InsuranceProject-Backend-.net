@@ -38,7 +38,7 @@ namespace Businnes.Concrete
             return new SuccessDataResult<List<Customer>>(_customerDal.GetAll(), "customers listed");
         }
 
-        public IDataResult<Customer> GetCustomerByTcno(int tcno)
+        public IDataResult<Customer> GetCustomerByTcno(string tcno)
         {
             return new SuccessDataResult<Customer>(_customerDal.Get(t=>t.tc_no==tcno),"customer listed with tcno");
         }

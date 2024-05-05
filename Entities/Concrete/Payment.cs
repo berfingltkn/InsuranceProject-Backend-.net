@@ -11,7 +11,7 @@ namespace Entities.Concrete
     public class Payment:IEntity
     {
         [Key] public int paymentId { get; set; }
-        public int userId {  get; set; }
+        public string userId {  get; set; }
         public int policyId { get; set; }
         public string nameOnCart { get; set; }
         public string surnameOnCart {  get; set; }

@@ -11,7 +11,7 @@ namespace Businnes.Abstract
 {
     public interface ICustomerService
     {
-        IDataResult<Customer> GetCustomerByTcno(int tcno);
+        IDataResult<Customer> GetCustomerByTcno(string tcno);
         IDataResult<List<Customer>> GetAll();
         IResult Add(Customer customer);
         IResult Update(Customer customer);

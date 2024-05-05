@@ -32,7 +32,7 @@ namespace Businnes.Concrete
             return new SuccessResult("policy deleted");
         }
 
-        public IDataResult<Policy> GePolicyIdByTcno(int customerIdNumber)
+        public IDataResult<Policy> GePolicyIdByTcno(string customerIdNumber)
         {
             return new SuccessDataResult<Policy>(_policyDal.Get(p=>p.customerIdNumber== customerIdNumber), "policy listed with tcno");
         }

@@ -62,7 +62,7 @@ namespace API.Controllers
         //}
 
         [HttpGet("getcustomerbytcno")]
-        public IActionResult GetCustomerByTcno(int tcno)
+        public IActionResult GetCustomerByTcno(string tcno)
         {
             var result = _customerService.GetCustomerByTcno(tcno);
             if (result.Success)

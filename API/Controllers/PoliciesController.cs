@@ -62,7 +62,7 @@ namespace API.Controllers
         }
 
         [HttpGet("getpolicyidbytcno")]
-        public IActionResult GetPolicyIdByTcno(int customerIdNumber)
+        public IActionResult GetPolicyIdByTcno(string customerIdNumber)
         {
             var result = _policyService.GePolicyIdByTcno(customerIdNumber);
             if (result.Success)

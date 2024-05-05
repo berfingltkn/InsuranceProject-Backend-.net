@@ -11,7 +11,7 @@ namespace Entities.Concrete
     public class Policy:IEntity
     {
         [Key] public int policyId { get; set; }
-        public int customerIdNumber { get; set; }
+        public string customerIdNumber { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
         public string policyType { get; set; }
